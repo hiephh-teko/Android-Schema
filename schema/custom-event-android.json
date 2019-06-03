@@ -30,9 +30,12 @@
       "required": [
         "id",
         "eventName",
-        "screenName",
         "createdAt",
-        "lastActiveAt"
+        "category",
+        "action",
+        "label",
+        "value",
+        "property"
       ],
       "properties": {
         "id": {
@@ -51,17 +54,7 @@
           "title": "The Eventname Schema",
           "default": "",
           "examples": [
-            "ScreenView"
-          ],
-          "pattern": "^(.*)$"
-        },
-        "screenName": {
-          "$id": "#/properties/event/properties/screenName",
-          "type": "string",
-          "title": "The Screenname Schema",
-          "default": "",
-          "examples": [
-            "SearchBooking"
+            "CustomEvent"
           ],
           "pattern": "^(.*)$"
         },
@@ -74,46 +67,55 @@
             1559549791
           ]
         },
-        "lastActiveAt": {
-          "$id": "#/properties/event/properties/lastActiveAt",
-          "type": "integer",
-          "title": "The Lastactiveat Schema",
-          "default": 0,
+        "category": {
+          "$id": "#/properties/event/properties/category",
+          "type": "string",
+          "title": "The Category Schema",
+          "default": "",
           "examples": [
-            1559549800
-          ]
-        },
-        "custom": {
-          "$id": "#/properties/event/properties/custom",
-          "type": "object",
-          "title": "The Custom Schema",
-          "default": null,
-          "required": [
-            "customAttr",
-            "customValue"
+            "Videos"
           ],
-          "properties": {
-            "customAttr": {
-              "$id": "#/properties/event/properties/custom/properties/customAttr",
-              "type": "string",
-              "title": "The Customattr Schema",
-              "default": "",
-              "examples": [
-                "Custom Attribute 01"
-              ],
-              "pattern": "^(.*)$"
-            },
-            "customValue": {
-              "$id": "#/properties/event/properties/custom/properties/customValue",
-              "type": "string",
-              "title": "The Customvalue Schema",
-              "default": "",
-              "examples": [
-                "Custom Value 01"
-              ],
-              "pattern": "^(.*)$"
-            }
-          }
+          "pattern": "^(.*)$"
+        },
+        "action": {
+          "$id": "#/properties/event/properties/action",
+          "type": "string",
+          "title": "The Action Schema",
+          "default": "",
+          "examples": [
+            "Play"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "label": {
+          "$id": "#/properties/event/properties/label",
+          "type": "string",
+          "title": "The Label Schema",
+          "default": "",
+          "examples": [
+            "Introducing_video.mp4"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "value": {
+          "$id": "#/properties/event/properties/value",
+          "type": "string",
+          "title": "The Value Schema",
+          "default": "",
+          "examples": [
+            "timeToLoad"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "property": {
+          "$id": "#/properties/event/properties/property",
+          "type": "string",
+          "title": "The Property Schema",
+          "default": "",
+          "examples": [
+            "abc"
+          ],
+          "pattern": "^(.*)$"
         }
       }
     },
@@ -130,8 +132,7 @@
         "osVer",
         "res",
         "tz",
-        "appVer",
-        "phoneNumber"
+        "appVer"
       ],
       "properties": {
         "createdAt": {
@@ -311,7 +312,7 @@
       "title": "The Schemaname Schema",
       "default": "",
       "examples": [
-        "screen-view-android"
+        "custom-event-android"
       ],
       "pattern": "^(.*)$"
     },

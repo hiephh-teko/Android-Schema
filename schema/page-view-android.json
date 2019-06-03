@@ -30,9 +30,10 @@
       "required": [
         "id",
         "eventName",
-        "screenName",
-        "createdAt",
-        "lastActiveAt"
+        "pageUrl",
+        "pageTitle",
+        "referrer",
+        "createdAt"
       ],
       "properties": {
         "id": {
@@ -51,17 +52,37 @@
           "title": "The Eventname Schema",
           "default": "",
           "examples": [
-            "ScreenView"
+            "PageView"
           ],
           "pattern": "^(.*)$"
         },
-        "screenName": {
-          "$id": "#/properties/event/properties/screenName",
+        "pageUrl": {
+          "$id": "#/properties/event/properties/pageUrl",
           "type": "string",
-          "title": "The Screenname Schema",
+          "title": "The Pageurl Schema",
           "default": "",
           "examples": [
-            "SearchBooking"
+            "https://www.youtube.com"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "pageTitle": {
+          "$id": "#/properties/event/properties/pageTitle",
+          "type": "string",
+          "title": "The Pagetitle Schema",
+          "default": "",
+          "examples": [
+            "Trippi Introducing"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "referrer": {
+          "$id": "#/properties/event/properties/referrer",
+          "type": "string",
+          "title": "The Referrer Schema",
+          "default": "",
+          "examples": [
+            "Google.com"
           ],
           "pattern": "^(.*)$"
         },
@@ -72,15 +93,6 @@
           "default": 0,
           "examples": [
             1559549791
-          ]
-        },
-        "lastActiveAt": {
-          "$id": "#/properties/event/properties/lastActiveAt",
-          "type": "integer",
-          "title": "The Lastactiveat Schema",
-          "default": 0,
-          "examples": [
-            1559549800
           ]
         },
         "custom": {
@@ -130,8 +142,7 @@
         "osVer",
         "res",
         "tz",
-        "appVer",
-        "phoneNumber"
+        "appVer"
       ],
       "properties": {
         "createdAt": {
@@ -311,7 +322,7 @@
       "title": "The Schemaname Schema",
       "default": "",
       "examples": [
-        "screen-view-android"
+        "page-view-android"
       ],
       "pattern": "^(.*)$"
     },

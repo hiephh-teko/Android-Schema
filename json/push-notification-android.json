@@ -2,14 +2,12 @@
   "appId": "Trippi.vn",
   "event": {
     "id": "f6d15d7d-b68f-41b1-8e4f-4bd622de37c0",
-    "eventName": "ScreenView",
-    "screenName": "SearchBooking",
-    "createdAt": 1559549791,
-    "lastActiveAt": 1559549800,
-    "custom": {
-      "customAttr": "Custom Attribute 01",
-      "customValue": "Custom Value 01"
-    }
+    "eventName": "PushNotification",
+    "notificationID": "abc",
+    "notificationName": "Trippi Voucher",
+    "notificationContent": "abc abc abc abc abc abc abc abc abc",
+    "openTime": 1559549791,
+    "clientTime": 1559549791
   },
   "session": {
     "createdAt": 1559542062,
@@ -31,6 +29,6 @@
     "clientId": "754047c4273395119bda4e5280d190d4",
     "userId": "754047c4273395119bda4e5280d19033"
   },
-  "schemaName": "screen-view-android",
+  "schemaName": "push-notification-android",
   "stm": 1559549791
 }

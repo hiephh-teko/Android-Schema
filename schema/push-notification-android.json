@@ -30,9 +30,11 @@
       "required": [
         "id",
         "eventName",
-        "screenName",
-        "createdAt",
-        "lastActiveAt"
+        "notificationID",
+        "notificationName",
+        "notificationContent",
+        "openTime",
+        "clientTime"
       ],
       "properties": {
         "id": {
@@ -51,69 +53,57 @@
           "title": "The Eventname Schema",
           "default": "",
           "examples": [
-            "ScreenView"
+            "PushNotification"
           ],
           "pattern": "^(.*)$"
         },
-        "screenName": {
-          "$id": "#/properties/event/properties/screenName",
+        "notificationID": {
+          "$id": "#/properties/event/properties/notificationID",
           "type": "string",
-          "title": "The Screenname Schema",
+          "title": "The Notificationid Schema",
           "default": "",
           "examples": [
-            "SearchBooking"
+            "abc"
           ],
           "pattern": "^(.*)$"
         },
-        "createdAt": {
-          "$id": "#/properties/event/properties/createdAt",
+        "notificationName": {
+          "$id": "#/properties/event/properties/notificationName",
+          "type": "string",
+          "title": "The Notificationname Schema",
+          "default": "",
+          "examples": [
+            "Trippi Voucher"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "notificationContent": {
+          "$id": "#/properties/event/properties/notificationContent",
+          "type": "string",
+          "title": "The Notificationcontent Schema",
+          "default": "",
+          "examples": [
+            "abc abc abc abc abc abc abc abc abc"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "openTime": {
+          "$id": "#/properties/event/properties/openTime",
           "type": "integer",
-          "title": "The Createdat Schema",
+          "title": "The Opentime Schema",
           "default": 0,
           "examples": [
             1559549791
           ]
         },
-        "lastActiveAt": {
-          "$id": "#/properties/event/properties/lastActiveAt",
+        "clientTime": {
+          "$id": "#/properties/event/properties/clientTime",
           "type": "integer",
-          "title": "The Lastactiveat Schema",
+          "title": "The Clienttime Schema",
           "default": 0,
           "examples": [
-            1559549800
+            1559549791
           ]
-        },
-        "custom": {
-          "$id": "#/properties/event/properties/custom",
-          "type": "object",
-          "title": "The Custom Schema",
-          "default": null,
-          "required": [
-            "customAttr",
-            "customValue"
-          ],
-          "properties": {
-            "customAttr": {
-              "$id": "#/properties/event/properties/custom/properties/customAttr",
-              "type": "string",
-              "title": "The Customattr Schema",
-              "default": "",
-              "examples": [
-                "Custom Attribute 01"
-              ],
-              "pattern": "^(.*)$"
-            },
-            "customValue": {
-              "$id": "#/properties/event/properties/custom/properties/customValue",
-              "type": "string",
-              "title": "The Customvalue Schema",
-              "default": "",
-              "examples": [
-                "Custom Value 01"
-              ],
-              "pattern": "^(.*)$"
-            }
-          }
         }
       }
     },
@@ -130,8 +120,7 @@
         "osVer",
         "res",
         "tz",
-        "appVer",
-        "phoneNumber"
+        "appVer"
       ],
       "properties": {
         "createdAt": {
@@ -311,7 +300,7 @@
       "title": "The Schemaname Schema",
       "default": "",
       "examples": [
-        "screen-view-android"
+        "push-notification-android"
       ],
       "pattern": "^(.*)$"
     },
