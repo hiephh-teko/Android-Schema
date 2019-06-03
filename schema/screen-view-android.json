@@ -1,0 +1,309 @@
+  1 {
+  2   "definitions": {},
+  3   "$schema": "http://json-schema.org/draft-07/schema#",
+  4   "$id": "http://example.com/root.json",
+  5   "type": "object",
+  6   "title": "The Root Schema",
+  7   "required": [
+  8     "appId",
+  9     "event",
+ 10     "session",
+ 11     "visitor",
+ 12     "schemaName",
+ 13     "stm"
+ 14   ],
+ 15   "properties": {
+ 16     "appId": {
+ 17       "$id": "#/properties/appId",
+ 18       "type": "string",
+ 19       "title": "The Appid Schema",
+ 20       "default": "",
+ 21       "examples": [
+ 22         "Trippi.vn"
+ 23       ],
+ 24       "pattern": "^(.*)$"
+ 25     },
+ 26     "event": {
+ 27       "$id": "#/properties/event",
+ 28       "type": "object",
+ 29       "title": "The Event Schema",
+ 30       "required": [
+ 31         "id",
+ 32         "eventName",
+ 33         "screenName",
+ 34         "createdAt",
+ 35         "lastActiveAt",
+ 36         "clientTime"
+ 37       ],
+ 38       "properties": {
+ 39         "id": {
+ 40           "$id": "#/properties/event/properties/id",
+ 41           "type": "string",
+ 42           "title": "The Id Schema",
+ 43           "default": "",
+ 44           "examples": [
+ 45             "f6d15d7d-b68f-41b1-8e4f-4bd622de37c0"
+ 46           ],
+ 47           "pattern": "^(.*)$"
+ 48         },
+ 49         "eventName": {
+ 50           "$id": "#/properties/event/properties/eventName",
+ 51           "type": "string",
+ 52           "title": "The Eventname Schema",
+ 53           "default": "",
+ 54           "examples": [
+ 55             "ScreenView"
+ 56           ],
+ 57           "pattern": "^(.*)$"
+ 58         },
+ 59         "screenName": {
+ 60           "$id": "#/properties/event/properties/screenName",
+ 61           "type": "string",
+ 62           "title": "The Screenname Schema",
+ 63           "default": "",
+ 64           "examples": [
+ 65             "SearchBooking"
+ 66           ],
+ 67           "pattern": "^(.*)$"
+ 68         },
+ 69         "createdAt": {
+ 70           "$id": "#/properties/event/properties/createdAt",
+ 71           "type": "integer",
+ 72           "title": "The Createdat Schema",
+ 73           "default": 0,
+ 74           "examples": [
+ 75             1559549791
+ 76           ]
+ 77         },
+ 78         "lastActiveAt": {
+ 79           "$id": "#/properties/event/properties/lastActiveAt",
+ 80           "type": "integer",
+ 81           "title": "The Lastactiveat Schema",
+ 82           "default": 0,
+ 83           "examples": [
+ 84             1559549800
+ 85           ]
+ 86         },
+ 87         "clientTime": {
+ 88           "$id": "#/properties/event/properties/clientTime",
+ 89           "type": "integer",
+ 90           "title": "The Clienttime Schema",
+ 91           "default": 0,
+ 92           "examples": [
+ 93             1559549793
+ 94           ]
+ 95         }
+ 96       }
+ 97     },
+ 98     "session": {
+ 99       "$id": "#/properties/session",
+100       "type": "object",
+101       "title": "The Session Schema",
+102       "required": [
+103         "createdAt",
+104         "id",
+105         "lastActiveAt",
+106         "offset",
+107         "platform",
+108         "osVer",
+109         "branchName",
+110         "modelName",
+111         "res",
+112         "tz",
+113         "appVer",
+114         "manafacturerName",
+115         "phoneNumber",
+116         "carrierName"
+117       ],
+118       "properties": {
+119         "createdAt": {
+120           "$id": "#/properties/session/properties/createdAt",
+121           "type": "integer",
+122           "title": "The Createdat Schema",
+123           "default": 0,
+124           "examples": [
+125             1559542062
+126           ]
+127         },
+128         "id": {
+129           "$id": "#/properties/session/properties/id",
+130           "type": "string",
+131           "title": "The Id Schema",
+132           "default": "",
+133           "examples": [
+134             "ec39f099-9877-45d8-ad8e-198d675deb02"
+135           ],
+136           "pattern": "^(.*)$"
+137         },
+138         "lastActiveAt": {
+139           "$id": "#/properties/session/properties/lastActiveAt",
+140           "type": "integer",
+141           "title": "The Lastactiveat Schema",
+142           "default": 0,
+143           "examples": [
+144             1559549791
+145           ]
+146         },
+147         "offset": {
+148           "$id": "#/properties/session/properties/offset",
+149           "type": "string",
+150           "title": "The Offset Schema",
+151           "default": "",
+152           "examples": [
+153             "+07:00"
+154           ],
+155           "pattern": "^(.*)$"
+156         },
+157         "platform": {
+158           "$id": "#/properties/session/properties/platform",
+159           "type": "string",
+160           "title": "The Platform Schema",
+161           "default": "",
+162           "examples": [
+163             "Android"
+164           ],
+165           "pattern": "^(.*)$"
+166         },
+167         "osVer": {
+168           "$id": "#/properties/session/properties/osVer",
+169           "type": "string",
+170           "title": "The Osver Schema",
+171           "default": "",
+172           "examples": [
+173             "Android 8.1"
+174           ],
+175           "pattern": "^(.*)$"
+176         },
+177         "branchName": {
+178           "$id": "#/properties/session/properties/branchName",
+179           "type": "string",
+180           "title": "The Branchname Schema",
+181           "default": "",
+182           "examples": [
+183             "Samsung"
+184           ],
+185           "pattern": "^(.*)$"
+186         },
+187         "modelName": {
+188           "$id": "#/properties/session/properties/modelName",
+189           "type": "string",
+190           "title": "The Modelname Schema",
+191           "default": "",
+192           "examples": [
+193             "Samsung S8"
+194           ],
+195           "pattern": "^(.*)$"
+196         },
+197         "res": {
+198           "$id": "#/properties/session/properties/res",
+199           "type": "string",
+200           "title": "The Res Schema",
+201           "default": "",
+202           "examples": [
+203             "2960x1440"
+204           ],
+205           "pattern": "^(.*)$"
+206         },
+207         "tz": {
+208           "$id": "#/properties/session/properties/tz",
+209           "type": "string",
+210           "title": "The Tz Schema",
+211           "default": "",
+212           "examples": [
+213             "Asia/Bangkok"
+214           ],
+215           "pattern": "^(.*)$"
+216         },
+217         "appVer": {
+218           "$id": "#/properties/session/properties/appVer",
+219           "type": "string",
+220           "title": "The Appver Schema",
+221           "default": "",
+222           "examples": [
+223             "1.0.0"
+224           ],
+225           "pattern": "^(.*)$"
+226         },
+227         "manafacturerName": {
+228           "$id": "#/properties/session/properties/manafacturerName",
+229           "type": "string",
+230           "title": "The Manafacturername Schema",
+231           "default": "",
+232           "examples": [
+233             "Google"
+234           ],
+235           "pattern": "^(.*)$"
+236         },
+237         "phoneNumber": {
+238           "$id": "#/properties/session/properties/phoneNumber",
+239           "type": "string",
+240           "title": "The Phonenumber Schema",
+241           "default": "",
+242           "examples": [
+243             "0981349669"
+244           ],
+245           "pattern": "^(.*)$"
+246         },
+247         "carrierName": {
+248           "$id": "#/properties/session/properties/carrierName",
+249           "type": "string",
+250           "title": "The Carriername Schema",
+251           "default": "",
+252           "examples": [
+253             "Viettel"
+254           ],
+255           "pattern": "^(.*)$"
+256         }
+257       }
+258     },
+259     "visitor": {
+260       "$id": "#/properties/visitor",
+261       "type": "object",
+262       "title": "The Visitor Schema",
+263       "required": [
+264         "clientId",
+265         "userId"
+266       ],
+267       "properties": {
+268         "clientId": {
+269           "$id": "#/properties/visitor/properties/clientId",
+270           "type": "string",
+271           "title": "The Clientid Schema",
+272           "default": "",
+273           "examples": [
+274             "754047c4273395119bda4e5280d190d4"
+275           ],
+276           "pattern": "^(.*)$"
+277         },
+278         "userId": {
+279           "$id": "#/properties/visitor/properties/userId",
+280           "type": "null",
+281           "title": "The Userid Schema",
+282           "default": null,
+283           "examples": [
+284             null
+285           ]
+286         }
+287       }
+288     },
+289     "schemaName": {
+290       "$id": "#/properties/schemaName",
+291       "type": "string",
+292       "title": "The Schemaname Schema",
+293       "default": "",
+294       "examples": [
+295         "screen-view"
+296       ],
+297       "pattern": "^(.*)$"
+298     },
+299     "stm": {
+300       "$id": "#/properties/stm",
+301       "type": "integer",
+302       "title": "The Stm Schema",
+303       "default": 0,
+304       "examples": [
+305         1559549791
+306       ]
+307     }
+308   }
+309 }
