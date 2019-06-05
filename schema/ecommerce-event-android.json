@@ -32,11 +32,13 @@
         "eventName",
         "createdAt",
         "orderId",
+        "affiliation",
         "grandTotal",
         "subTotal",
         "tax",
         "shipping",
-        "discount"
+        "discount",
+        "products"
       ],
       "properties": {
         "id": {
@@ -75,6 +77,16 @@
           "default": "",
           "examples": [
             ""
+          ],
+          "pattern": "^(.*)$"
+        },
+        "affiliation": {
+          "$id": "#/properties/event/properties/affiliation",
+          "type": "string",
+          "title": "The Affiliation Schema",
+          "default": "",
+          "examples": [
+            "phong vu"
           ],
           "pattern": "^(.*)$"
         },
@@ -127,7 +139,6 @@
           "$id": "#/properties/event/properties/products",
           "type": "array",
           "title": "The Products Schema",
-          "default": null,
           "items": {
             "$id": "#/properties/event/properties/products/items",
             "type": "object",
