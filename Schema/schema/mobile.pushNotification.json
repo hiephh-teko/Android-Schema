@@ -29,11 +29,12 @@
       "title": "The Event Schema",
       "required": [
         "id",
-        "eventName",
         "createdAt",
-        "networkSuccessRate",
-        "networkType",
-        "networkResponseLatency"
+        "eventName",
+        "notificationID",
+        "notificationName",
+        "notificationContent",
+        "openTime"
       ],
       "properties": {
         "id": {
@@ -46,16 +47,6 @@
           ],
           "pattern": "^(.*)$"
         },
-        "eventName": {
-          "$id": "#/properties/event/properties/eventName",
-          "type": "string",
-          "title": "The Eventname Schema",
-          "default": "",
-          "examples": [
-            "TimingEvent"
-          ],
-          "pattern": "^(.*)$"
-        },
         "createdAt": {
           "$id": "#/properties/event/properties/createdAt",
           "type": "integer",
@@ -65,32 +56,53 @@
             1559549791
           ]
         },
-        "networkSuccessRate": {
-          "$id": "#/properties/event/properties/networkSuccessRate",
-          "type": "integer",
-          "title": "The Networksuccessrate Schema",
-          "default": 0,
-          "examples": [
-            1
-          ]
-        },
-        "networkType": {
-          "$id": "#/properties/event/properties/networkType",
+        "eventName": {
+          "$id": "#/properties/event/properties/eventName",
           "type": "string",
-          "title": "The Networktype Schema",
+          "title": "The Eventname Schema",
           "default": "",
           "examples": [
-            "Wifi"
+            "PushNotification"
           ],
           "pattern": "^(.*)$"
         },
-        "networkResponseLatency": {
-          "$id": "#/properties/event/properties/networkResponseLatency",
+        "notificationID": {
+          "$id": "#/properties/event/properties/notificationID",
+          "type": "string",
+          "title": "The Notificationid Schema",
+          "default": "",
+          "examples": [
+            "abc"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "notificationName": {
+          "$id": "#/properties/event/properties/notificationName",
+          "type": "string",
+          "title": "The Notificationname Schema",
+          "default": "",
+          "examples": [
+            "Trippi Voucher"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "notificationContent": {
+          "$id": "#/properties/event/properties/notificationContent",
+          "type": "string",
+          "title": "The Notificationcontent Schema",
+          "default": "",
+          "examples": [
+            "abc abc abc abc abc abc abc abc abc"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "openTime": {
+          "$id": "#/properties/event/properties/openTime",
           "type": "integer",
-          "title": "The Networkresponselatency Schema",
+          "title": "The Opentime Schema",
           "default": 0,
           "examples": [
-            100
+            1559549791
           ]
         }
       }
@@ -106,9 +118,15 @@
         "offset",
         "platform",
         "osVer",
+        "branchName",
+        "modelName",
         "res",
         "tz",
-        "appVer"
+        "appVer",
+        "manafacturerName",
+        "phoneNumber",
+        "carrierName",
+        "networkType"
       ],
       "properties": {
         "createdAt": {
@@ -248,6 +266,16 @@
             "Viettel"
           ],
           "pattern": "^(.*)$"
+        },
+        "networkType": {
+          "$id": "#/properties/session/properties/networkType",
+          "type": "string",
+          "title": "The Networktype Schema",
+          "default": "",
+          "examples": [
+            "Wifi"
+          ],
+          "pattern": "^(.*)$"
         }
       }
     },
@@ -288,7 +316,7 @@
       "title": "The Schemaname Schema",
       "default": "",
       "examples": [
-        "timing-event-android"
+        "mobile.pushNotification"
       ],
       "pattern": "^(.*)$"
     },

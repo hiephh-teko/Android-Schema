@@ -1,0 +1,36 @@
+{
+    "appId": "Trippi.vn",
+    "event": {
+      "id": "f6d15d7d-b68f-41b1-8e4f-4bd622de37c0",
+      "createdAt": 1559549791,
+      "eventName": "PushNotification",
+      "notificationID": "abc",
+      "notificationName": "Trippi Voucher",
+      "notificationContent": "abc abc abc abc abc abc abc abc abc",
+      "openTime": 1559549791
+      
+    },
+    "session": {
+      "createdAt": 1559542062,
+      "id": "ec39f099-9877-45d8-ad8e-198d675deb02",
+      "lastActiveAt": 1559549791,
+      "offset": "+07:00",
+      "platform": "Android",
+      "osVer": "Android 8.1",
+      "branchName": "Samsung",
+      "modelName": "Samsung S8",
+      "res": "2960x1440",
+      "tz": "Asia/Bangkok",
+      "appVer": "1.0.0",
+      "manafacturerName": "Google",
+      "phoneNumber": "0981349669",
+      "carrierName": "Viettel",
+      "networkType": "Wifi"
+    },
+    "visitor": {
+      "clientId": "754047c4273395119bda4e5280d190d4",
+      "userId": "754047c4273395119bda4e5280d19033"
+    },
+    "schemaName": "mobile.pushNotification",
+    "stm": 1559549791
+  }

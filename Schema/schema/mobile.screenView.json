@@ -30,12 +30,10 @@
       "required": [
         "id",
         "eventName",
+        "screenName",
         "createdAt",
-        "category",
-        "action",
-        "label",
-        "value",
-        "property"
+        "lastActiveAt",
+        "custom"
       ],
       "properties": {
         "id": {
@@ -54,7 +52,17 @@
           "title": "The Eventname Schema",
           "default": "",
           "examples": [
-            "CustomEvent"
+            "ScreenView"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "screenName": {
+          "$id": "#/properties/event/properties/screenName",
+          "type": "string",
+          "title": "The Screenname Schema",
+          "default": "",
+          "examples": [
+            "SearchBooking"
           ],
           "pattern": "^(.*)$"
         },
@@ -67,55 +75,45 @@
             1559549791
           ]
         },
-        "category": {
-          "$id": "#/properties/event/properties/category",
-          "type": "string",
-          "title": "The Category Schema",
-          "default": "",
+        "lastActiveAt": {
+          "$id": "#/properties/event/properties/lastActiveAt",
+          "type": "integer",
+          "title": "The Lastactiveat Schema",
+          "default": 0,
           "examples": [
-            "Videos"
-          ],
-          "pattern": "^(.*)$"
+            1559549800
+          ]
         },
-        "action": {
-          "$id": "#/properties/event/properties/action",
-          "type": "string",
-          "title": "The Action Schema",
-          "default": "",
-          "examples": [
-            "Play"
+        "custom": {
+          "$id": "#/properties/event/properties/custom",
+          "type": "object",
+          "title": "The Custom Schema",
+          "required": [
+            "customAttr",
+            "customValue"
           ],
-          "pattern": "^(.*)$"
-        },
-        "label": {
-          "$id": "#/properties/event/properties/label",
-          "type": "string",
-          "title": "The Label Schema",
-          "default": "",
-          "examples": [
-            "Introducing_video.mp4"
-          ],
-          "pattern": "^(.*)$"
-        },
-        "value": {
-          "$id": "#/properties/event/properties/value",
-          "type": "string",
-          "title": "The Value Schema",
-          "default": "",
-          "examples": [
-            "timeToLoad"
-          ],
-          "pattern": "^(.*)$"
-        },
-        "property": {
-          "$id": "#/properties/event/properties/property",
-          "type": "string",
-          "title": "The Property Schema",
-          "default": "",
-          "examples": [
-            "abc"
-          ],
-          "pattern": "^(.*)$"
+          "properties": {
+            "customAttr": {
+              "$id": "#/properties/event/properties/custom/properties/customAttr",
+              "type": "string",
+              "title": "The Customattr Schema",
+              "default": "",
+              "examples": [
+                "Custom Attribute 01"
+              ],
+              "pattern": "^(.*)$"
+            },
+            "customValue": {
+              "$id": "#/properties/event/properties/custom/properties/customValue",
+              "type": "string",
+              "title": "The Customvalue Schema",
+              "default": "",
+              "examples": [
+                "Custom Value 01"
+              ],
+              "pattern": "^(.*)$"
+            }
+          }
         }
       }
     },
@@ -130,9 +128,15 @@
         "offset",
         "platform",
         "osVer",
+        "branchName",
+        "modelName",
         "res",
         "tz",
-        "appVer"
+        "appVer",
+        "manafacturerName",
+        "phoneNumber",
+        "carrierName",
+        "networkType"
       ],
       "properties": {
         "createdAt": {
@@ -272,6 +276,16 @@
             "Viettel"
           ],
           "pattern": "^(.*)$"
+        },
+        "networkType": {
+          "$id": "#/properties/session/properties/networkType",
+          "type": "string",
+          "title": "The Networktype Schema",
+          "default": "",
+          "examples": [
+            "Wifi"
+          ],
+          "pattern": "^(.*)$"
         }
       }
     },
@@ -312,7 +326,7 @@
       "title": "The Schemaname Schema",
       "default": "",
       "examples": [
-        "custom-event-android"
+        "mobile.screenView"
       ],
       "pattern": "^(.*)$"
     },

@@ -30,13 +30,11 @@
       "required": [
         "id",
         "eventName",
+        "pageUrl",
+        "pageTitle",
+        "referrer",
         "createdAt",
-        "sku",
-        "name",
-        "category",
-        "price",
-        "quantity",
-        "currency"
+        "custom"
       ],
       "properties": {
         "id": {
@@ -55,7 +53,37 @@
           "title": "The Eventname Schema",
           "default": "",
           "examples": [
-            "CartEvent"
+            "PageView"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "pageUrl": {
+          "$id": "#/properties/event/properties/pageUrl",
+          "type": "string",
+          "title": "The Pageurl Schema",
+          "default": "",
+          "examples": [
+            "https://www.youtube.com"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "pageTitle": {
+          "$id": "#/properties/event/properties/pageTitle",
+          "type": "string",
+          "title": "The Pagetitle Schema",
+          "default": "",
+          "examples": [
+            "Trippi Introducing"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "referrer": {
+          "$id": "#/properties/event/properties/referrer",
+          "type": "string",
+          "title": "The Referrer Schema",
+          "default": "",
+          "examples": [
+            "Google.com"
           ],
           "pattern": "^(.*)$"
         },
@@ -68,63 +96,36 @@
             1559549791
           ]
         },
-        "sku": {
-          "$id": "#/properties/event/properties/sku",
-          "type": "string",
-          "title": "The Sku Schema",
-          "default": "",
-          "examples": [
-            ""
+        "custom": {
+          "$id": "#/properties/event/properties/custom",
+          "type": "object",
+          "title": "The Custom Schema",
+          "required": [
+            "customAttr",
+            "customValue"
           ],
-          "pattern": "^(.*)$"
-        },
-        "name": {
-          "$id": "#/properties/event/properties/name",
-          "type": "string",
-          "title": "The Name Schema",
-          "default": "",
-          "examples": [
-            ""
-          ],
-          "pattern": "^(.*)$"
-        },
-        "category": {
-          "$id": "#/properties/event/properties/category",
-          "type": "string",
-          "title": "The Category Schema",
-          "default": "",
-          "examples": [
-            ""
-          ],
-          "pattern": "^(.*)$"
-        },
-        "price": {
-          "$id": "#/properties/event/properties/price",
-          "type": "integer",
-          "title": "The Price Schema",
-          "default": 0,
-          "examples": [
-            1
-          ]
-        },
-        "quantity": {
-          "$id": "#/properties/event/properties/quantity",
-          "type": "integer",
-          "title": "The Quantity Schema",
-          "default": 0,
-          "examples": [
-            1
-          ]
-        },
-        "currency": {
-          "$id": "#/properties/event/properties/currency",
-          "type": "string",
-          "title": "The Currency Schema",
-          "default": "",
-          "examples": [
-            "VND"
-          ],
-          "pattern": "^(.*)$"
+          "properties": {
+            "customAttr": {
+              "$id": "#/properties/event/properties/custom/properties/customAttr",
+              "type": "string",
+              "title": "The Customattr Schema",
+              "default": "",
+              "examples": [
+                "Custom Attribute 01"
+              ],
+              "pattern": "^(.*)$"
+            },
+            "customValue": {
+              "$id": "#/properties/event/properties/custom/properties/customValue",
+              "type": "string",
+              "title": "The Customvalue Schema",
+              "default": "",
+              "examples": [
+                "Custom Value 01"
+              ],
+              "pattern": "^(.*)$"
+            }
+          }
         }
       }
     },
@@ -139,9 +140,15 @@
         "offset",
         "platform",
         "osVer",
+        "branchName",
+        "modelName",
         "res",
         "tz",
-        "appVer"
+        "appVer",
+        "manafacturerName",
+        "phoneNumber",
+        "carrierName",
+        "networkType"
       ],
       "properties": {
         "createdAt": {
@@ -281,6 +288,16 @@
             "Viettel"
           ],
           "pattern": "^(.*)$"
+        },
+        "networkType": {
+          "$id": "#/properties/session/properties/networkType",
+          "type": "string",
+          "title": "The Networktype Schema",
+          "default": "",
+          "examples": [
+            "Wifi"
+          ],
+          "pattern": "^(.*)$"
         }
       }
     },
@@ -321,7 +338,7 @@
       "title": "The Schemaname Schema",
       "default": "",
       "examples": [
-        "cart-event-android"
+        "mobile.pageView"
       ],
       "pattern": "^(.*)$"
     },

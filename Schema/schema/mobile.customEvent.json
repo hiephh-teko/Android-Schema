@@ -30,11 +30,12 @@
       "required": [
         "id",
         "eventName",
-        "notificationID",
-        "notificationName",
-        "notificationContent",
-        "openTime",
-        "clientTime"
+        "createdAt",
+        "category",
+        "action",
+        "label",
+        "value",
+        "property"
       ],
       "properties": {
         "id": {
@@ -53,57 +54,68 @@
           "title": "The Eventname Schema",
           "default": "",
           "examples": [
-            "PushNotification"
+            "CustomEvent"
           ],
           "pattern": "^(.*)$"
         },
-        "notificationID": {
-          "$id": "#/properties/event/properties/notificationID",
+        "createdAt": {
+          "$id": "#/properties/event/properties/createdAt",
+          "type": "integer",
+          "title": "The Createdat Schema",
+          "default": 0,
+          "examples": [
+            1559549791
+          ]
+        },
+        "category": {
+          "$id": "#/properties/event/properties/category",
           "type": "string",
-          "title": "The Notificationid Schema",
+          "title": "The Category Schema",
+          "default": "",
+          "examples": [
+            "Videos"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "action": {
+          "$id": "#/properties/event/properties/action",
+          "type": "string",
+          "title": "The Action Schema",
+          "default": "",
+          "examples": [
+            "Play"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "label": {
+          "$id": "#/properties/event/properties/label",
+          "type": "string",
+          "title": "The Label Schema",
+          "default": "",
+          "examples": [
+            "Introducing_video.mp4"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "value": {
+          "$id": "#/properties/event/properties/value",
+          "type": "string",
+          "title": "The Value Schema",
+          "default": "",
+          "examples": [
+            "timeToLoad"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "property": {
+          "$id": "#/properties/event/properties/property",
+          "type": "string",
+          "title": "The Property Schema",
           "default": "",
           "examples": [
             "abc"
           ],
           "pattern": "^(.*)$"
-        },
-        "notificationName": {
-          "$id": "#/properties/event/properties/notificationName",
-          "type": "string",
-          "title": "The Notificationname Schema",
-          "default": "",
-          "examples": [
-            "Trippi Voucher"
-          ],
-          "pattern": "^(.*)$"
-        },
-        "notificationContent": {
-          "$id": "#/properties/event/properties/notificationContent",
-          "type": "string",
-          "title": "The Notificationcontent Schema",
-          "default": "",
-          "examples": [
-            "abc abc abc abc abc abc abc abc abc"
-          ],
-          "pattern": "^(.*)$"
-        },
-        "openTime": {
-          "$id": "#/properties/event/properties/openTime",
-          "type": "integer",
-          "title": "The Opentime Schema",
-          "default": 0,
-          "examples": [
-            1559549791
-          ]
-        },
-        "clientTime": {
-          "$id": "#/properties/event/properties/clientTime",
-          "type": "integer",
-          "title": "The Clienttime Schema",
-          "default": 0,
-          "examples": [
-            1559549791
-          ]
         }
       }
     },
@@ -118,9 +130,15 @@
         "offset",
         "platform",
         "osVer",
+        "branchName",
+        "modelName",
         "res",
         "tz",
-        "appVer"
+        "appVer",
+        "manafacturerName",
+        "phoneNumber",
+        "carrierName",
+        "networkType"
       ],
       "properties": {
         "createdAt": {
@@ -260,6 +278,16 @@
             "Viettel"
           ],
           "pattern": "^(.*)$"
+        },
+        "networkType": {
+          "$id": "#/properties/session/properties/networkType",
+          "type": "string",
+          "title": "The Networktype Schema",
+          "default": "",
+          "examples": [
+            "Wifi"
+          ],
+          "pattern": "^(.*)$"
         }
       }
     },
@@ -300,7 +328,7 @@
       "title": "The Schemaname Schema",
       "default": "",
       "examples": [
-        "push-notification-android"
+        "mobile.customEvent"
       ],
       "pattern": "^(.*)$"
     },

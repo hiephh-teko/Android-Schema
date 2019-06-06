@@ -30,9 +30,15 @@
       "required": [
         "id",
         "eventName",
-        "screenName",
         "createdAt",
-        "lastActiveAt"
+        "orderId",
+        "affiliation",
+        "grandTotal",
+        "subTotal",
+        "tax",
+        "shipping",
+        "discount",
+        "products"
       ],
       "properties": {
         "id": {
@@ -51,17 +57,7 @@
           "title": "The Eventname Schema",
           "default": "",
           "examples": [
-            "ScreenView"
-          ],
-          "pattern": "^(.*)$"
-        },
-        "screenName": {
-          "$id": "#/properties/event/properties/screenName",
-          "type": "string",
-          "title": "The Screenname Schema",
-          "default": "",
-          "examples": [
-            "SearchBooking"
+            "EcommerceEvent"
           ],
           "pattern": "^(.*)$"
         },
@@ -74,44 +70,146 @@
             1559549791
           ]
         },
-        "lastActiveAt": {
-          "$id": "#/properties/event/properties/lastActiveAt",
+        "orderId": {
+          "$id": "#/properties/event/properties/orderId",
+          "type": "string",
+          "title": "The Orderid Schema",
+          "default": "",
+          "examples": [
+            ""
+          ],
+          "pattern": "^(.*)$"
+        },
+        "affiliation": {
+          "$id": "#/properties/event/properties/affiliation",
+          "type": "string",
+          "title": "The Affiliation Schema",
+          "default": "",
+          "examples": [
+            "phong vu"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "grandTotal": {
+          "$id": "#/properties/event/properties/grandTotal",
           "type": "integer",
-          "title": "The Lastactiveat Schema",
+          "title": "The Grandtotal Schema",
           "default": 0,
           "examples": [
-            1559549800
+            0
           ]
         },
-        "custom": {
-          "$id": "#/properties/event/properties/custom",
-          "type": "object",
-          "title": "The Custom Schema",
-          "default": null,
-          "required": [
-            "customAttr",
-            "customValue"
-          ],
-          "properties": {
-            "customAttr": {
-              "$id": "#/properties/event/properties/custom/properties/customAttr",
-              "type": "string",
-              "title": "The Customattr Schema",
-              "default": "",
-              "examples": [
-                "Custom Attribute 01"
-              ],
-              "pattern": "^(.*)$"
-            },
-            "customValue": {
-              "$id": "#/properties/event/properties/custom/properties/customValue",
-              "type": "string",
-              "title": "The Customvalue Schema",
-              "default": "",
-              "examples": [
-                "Custom Value 01"
-              ],
-              "pattern": "^(.*)$"
+        "subTotal": {
+          "$id": "#/properties/event/properties/subTotal",
+          "type": "integer",
+          "title": "The Subtotal Schema",
+          "default": 0,
+          "examples": [
+            0
+          ]
+        },
+        "tax": {
+          "$id": "#/properties/event/properties/tax",
+          "type": "integer",
+          "title": "The Tax Schema",
+          "default": 0,
+          "examples": [
+            0
+          ]
+        },
+        "shipping": {
+          "$id": "#/properties/event/properties/shipping",
+          "type": "integer",
+          "title": "The Shipping Schema",
+          "default": 0,
+          "examples": [
+            0
+          ]
+        },
+        "discount": {
+          "$id": "#/properties/event/properties/discount",
+          "type": "integer",
+          "title": "The Discount Schema",
+          "default": 0,
+          "examples": [
+            0
+          ]
+        },
+        "products": {
+          "$id": "#/properties/event/properties/products",
+          "type": "array",
+          "title": "The Products Schema",
+          "items": {
+            "$id": "#/properties/event/properties/products/items",
+            "type": "object",
+            "title": "The Items Schema",
+            "required": [
+              "sku",
+              "name",
+              "category",
+              "price",
+              "quantity",
+              "currency"
+            ],
+            "properties": {
+              "sku": {
+                "$id": "#/properties/event/properties/products/items/properties/sku",
+                "type": "string",
+                "title": "The Sku Schema",
+                "default": "",
+                "examples": [
+                  ""
+                ],
+                "pattern": "^(.*)$"
+              },
+              "name": {
+                "$id": "#/properties/event/properties/products/items/properties/name",
+                "type": "string",
+                "title": "The Name Schema",
+                "default": "",
+                "examples": [
+                  ""
+                ],
+                "pattern": "^(.*)$"
+              },
+              "category": {
+                "$id": "#/properties/event/properties/products/items/properties/category",
+                "type": "string",
+                "title": "The Category Schema",
+                "default": "",
+                "examples": [
+                  ""
+                ],
+                "pattern": "^(.*)$"
+              },
+              "price": {
+                "$id": "#/properties/event/properties/products/items/properties/price",
+                "type": "integer",
+                "title": "The Price Schema",
+                "default": 0,
+                "examples": [
+                  1
+                ]
+              },
+              "quantity": {
+                "$id": "#/properties/event/properties/products/items/properties/quantity",
+                "type": "integer",
+                "title": "The Quantity Schema",
+                "default": 0,
+                "examples": [
+                  1
+                ]
+              },
+              "currency": {
+                "$id": "#/properties/event/properties/products/items/properties/currency",
+                "type": "string",
+                "title": "The Currency Schema",
+                "default": "",
+                "examples": [
+                  "VND"
+                ],
+                "pattern": "^(.*)$"
+              }
             }
           }
         }
@@ -128,10 +226,15 @@
         "offset",
         "platform",
         "osVer",
+        "branchName",
+        "modelName",
         "res",
         "tz",
         "appVer",
-        "phoneNumber"
+        "manafacturerName",
+        "phoneNumber",
+        "carrierName",
+        "networkType"
       ],
       "properties": {
         "createdAt": {
@@ -271,6 +374,16 @@
             "Viettel"
           ],
           "pattern": "^(.*)$"
+        },
+        "networkType": {
+          "$id": "#/properties/session/properties/networkType",
+          "type": "string",
+          "title": "The Networktype Schema",
+          "default": "",
+          "examples": [
+            "Wifi"
+          ],
+          "pattern": "^(.*)$"
         }
       }
     },
@@ -311,7 +424,7 @@
       "title": "The Schemaname Schema",
       "default": "",
       "examples": [
-        "screen-view-android"
+        "mobile.ecommerceEvent"
       ],
       "pattern": "^(.*)$"
     },

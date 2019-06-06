@@ -25,13 +25,14 @@
       "appVer": "1.0.0",
       "manafacturerName": "Google",
       "phoneNumber": "0981349669",
-      "carrierName": "Viettel"
+      "carrierName": "Viettel",
+      "networkType": "Wifi"
     },
     "visitor": {
       "clientId": "754047c4273395119bda4e5280d190d4",
       "userId": "754047c4273395119bda4e5280d19033"
     },
-    "schemaName": "cart-event-android",
+    "schemaName": "mobile.cartEvent",
     "stm": 1559549791
   }
 
