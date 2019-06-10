@@ -147,7 +147,7 @@
         "modelName",
         "res",
         "tz",
-        "manafacturerName"
+        "manufacturerName"
       ],
       "properties": {
         "createdAt": {
@@ -248,10 +248,10 @@
           ],
           "pattern": "^(.*)$"
         },
-        "manafacturerName": {
-          "$id": "#/properties/session/properties/manafacturerName",
+        "manufacturerName": {
+          "$id": "#/properties/session/properties/manufacturerName",
           "type": "string",
-          "title": "The Manafacturername Schema",
+          "title": "The manufacturername Schema",
           "default": "",
           "examples": [
             "Google"
