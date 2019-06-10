@@ -2,7 +2,8 @@
     "appId": "Trippi.vn",
     "event": {
       "id": "f6d15d7d-b68f-41b1-8e4f-4bd622de37c0",
-      "eventName": "EcommerceEvent",
+      "eventType": "EcommerceEvent",
+      "eventName": "checkoutCart",
       "createdAt": 1559549791,
       "orderId": "",
       "affiliation": "phong vu",
@@ -33,8 +34,10 @@
       "modelName": "Samsung S8",
       "res": "2960x1440",
       "tz": "Asia/Bangkok",
-      "appVer": "1.0.0",
-      "manafacturerName": "Google",
+      "manafacturerName": "Google"
+    },
+    "appVer": "1.0.0",
+    "network":{
       "phoneNumber": "0981349669",
       "carrierName": "Viettel",
       "networkType": "Wifi"

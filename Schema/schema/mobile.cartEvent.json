@@ -1,354 +1,375 @@
 {
-  "definitions": {},
-  "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "http://example.com/root.json",
-  "type": "object",
-  "title": "The Root Schema",
-  "required": [
-    "appId",
-    "event",
-    "session",
-    "visitor",
-    "schemaName",
-    "stm"
-  ],
-  "properties": {
-    "appId": {
-      "$id": "#/properties/appId",
-      "type": "string",
-      "title": "The Appid Schema",
-      "default": "",
-      "examples": [
-        "Trippi.vn"
-      ],
-      "pattern": "^(.*)$"
-    },
-    "event": {
-      "$id": "#/properties/event",
-      "type": "object",
-      "title": "The Event Schema",
-      "required": [
-        "id",
-        "eventName",
-        "createdAt",
-        "sku",
-        "name",
-        "category",
-        "price",
-        "quantity",
-        "currency"
-      ],
-      "properties": {
-        "id": {
-          "$id": "#/properties/event/properties/id",
-          "type": "string",
-          "title": "The Id Schema",
-          "default": "",
-          "examples": [
-            "f6d15d7d-b68f-41b1-8e4f-4bd622de37c0"
-          ],
-          "pattern": "^(.*)$"
-        },
-        "eventName": {
-          "$id": "#/properties/event/properties/eventName",
-          "type": "string",
-          "title": "The Eventname Schema",
-          "default": "",
-          "examples": [
-            "CartEvent"
-          ],
-          "pattern": "^(.*)$"
-        },
-        "createdAt": {
-          "$id": "#/properties/event/properties/createdAt",
-          "type": "integer",
-          "title": "The Createdat Schema",
-          "default": 0,
-          "examples": [
-            1559549791
-          ]
-        },
-        "sku": {
-          "$id": "#/properties/event/properties/sku",
-          "type": "string",
-          "title": "The Sku Schema",
-          "default": "",
-          "examples": [
-            ""
-          ],
-          "pattern": "^(.*)$"
-        },
-        "name": {
-          "$id": "#/properties/event/properties/name",
-          "type": "string",
-          "title": "The Name Schema",
-          "default": "",
-          "examples": [
-            ""
-          ],
-          "pattern": "^(.*)$"
-        },
-        "category": {
-          "$id": "#/properties/event/properties/category",
-          "type": "string",
-          "title": "The Category Schema",
-          "default": "",
-          "examples": [
-            ""
-          ],
-          "pattern": "^(.*)$"
-        },
-        "price": {
-          "$id": "#/properties/event/properties/price",
-          "type": "integer",
-          "title": "The Price Schema",
-          "default": 0,
-          "examples": [
-            1
-          ]
-        },
-        "quantity": {
-          "$id": "#/properties/event/properties/quantity",
-          "type": "integer",
-          "title": "The Quantity Schema",
-          "default": 0,
-          "examples": [
-            1
-          ]
-        },
-        "currency": {
-          "$id": "#/properties/event/properties/currency",
-          "type": "string",
-          "title": "The Currency Schema",
-          "default": "",
-          "examples": [
-            "VND"
-          ],
-          "pattern": "^(.*)$"
+    "definitions": {},
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "http://example.com/root.json",
+    "type": "object",
+    "title": "The Root Schema",
+    "required": [
+      "appId",
+      "event",
+      "session",
+      "appVer",
+      "network",
+      "visitor",
+      "schemaName",
+      "stm"
+    ],
+    "properties": {
+      "appId": {
+        "$id": "#/properties/appId",
+        "type": "string",
+        "title": "The Appid Schema",
+        "default": "",
+        "examples": [
+          "Trippi.vn"
+        ],
+        "pattern": "^(.*)$"
+      },
+      "event": {
+        "$id": "#/properties/event",
+        "type": "object",
+        "title": "The Event Schema",
+        "required": [
+          "id",
+          "eventType",
+          "eventName",
+          "createdAt",
+          "sku",
+          "name",
+          "category",
+          "price",
+          "quantity",
+          "currency"
+        ],
+        "properties": {
+          "id": {
+            "$id": "#/properties/event/properties/id",
+            "type": "string",
+            "title": "The Id Schema",
+            "default": "",
+            "examples": [
+              "f6d15d7d-b68f-41b1-8e4f-4bd622de37c0"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "eventType": {
+            "$id": "#/properties/event/properties/eventType",
+            "type": "string",
+            "title": "The Eventtype Schema",
+            "default": "",
+            "examples": [
+              "CartEvent"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "eventName": {
+            "$id": "#/properties/event/properties/eventName",
+            "type": "string",
+            "title": "The Eventname Schema",
+            "default": "",
+            "examples": [
+              "addToCart"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "createdAt": {
+            "$id": "#/properties/event/properties/createdAt",
+            "type": "integer",
+            "title": "The Createdat Schema",
+            "default": 0,
+            "examples": [
+              1559549791
+            ]
+          },
+          "sku": {
+            "$id": "#/properties/event/properties/sku",
+            "type": "string",
+            "title": "The Sku Schema",
+            "default": "",
+            "examples": [
+              ""
+            ],
+            "pattern": "^(.*)$"
+          },
+          "name": {
+            "$id": "#/properties/event/properties/name",
+            "type": "string",
+            "title": "The Name Schema",
+            "default": "",
+            "examples": [
+              ""
+            ],
+            "pattern": "^(.*)$"
+          },
+          "category": {
+            "$id": "#/properties/event/properties/category",
+            "type": "string",
+            "title": "The Category Schema",
+            "default": "",
+            "examples": [
+              ""
+            ],
+            "pattern": "^(.*)$"
+          },
+          "price": {
+            "$id": "#/properties/event/properties/price",
+            "type": "integer",
+            "title": "The Price Schema",
+            "default": 0,
+            "examples": [
+              1
+            ]
+          },
+          "quantity": {
+            "$id": "#/properties/event/properties/quantity",
+            "type": "integer",
+            "title": "The Quantity Schema",
+            "default": 0,
+            "examples": [
+              1
+            ]
+          },
+          "currency": {
+            "$id": "#/properties/event/properties/currency",
+            "type": "string",
+            "title": "The Currency Schema",
+            "default": "",
+            "examples": [
+              "VND"
+            ],
+            "pattern": "^(.*)$"
+          }
         }
-      }
-    },
-    "session": {
-      "$id": "#/properties/session",
-      "type": "object",
-      "title": "The Session Schema",
-      "required": [
-        "createdAt",
-        "id",
-        "lastActiveAt",
-        "offset",
-        "platform",
-        "osVer",
-        "branchName",
-        "modelName",
-        "res",
-        "tz",
-        "appVer",
-        "manafacturerName",
-        "phoneNumber",
-        "carrierName",
-        "networkType"
-      ],
-      "properties": {
-        "createdAt": {
-          "$id": "#/properties/session/properties/createdAt",
-          "type": "integer",
-          "title": "The Createdat Schema",
-          "default": 0,
-          "examples": [
-            1559542062
-          ]
-        },
-        "id": {
-          "$id": "#/properties/session/properties/id",
-          "type": "string",
-          "title": "The Id Schema",
-          "default": "",
-          "examples": [
-            "ec39f099-9877-45d8-ad8e-198d675deb02"
-          ],
-          "pattern": "^(.*)$"
-        },
-        "lastActiveAt": {
-          "$id": "#/properties/session/properties/lastActiveAt",
-          "type": "integer",
-          "title": "The Lastactiveat Schema",
-          "default": 0,
-          "examples": [
-            1559549791
-          ]
-        },
-        "offset": {
-          "$id": "#/properties/session/properties/offset",
-          "type": "string",
-          "title": "The Offset Schema",
-          "default": "",
-          "examples": [
-            "+07:00"
-          ],
-          "pattern": "^(.*)$"
-        },
-        "platform": {
-          "$id": "#/properties/session/properties/platform",
-          "type": "string",
-          "title": "The Platform Schema",
-          "default": "",
-          "examples": [
-            "Android"
-          ],
-          "pattern": "^(.*)$"
-        },
-        "osVer": {
-          "$id": "#/properties/session/properties/osVer",
-          "type": "string",
-          "title": "The Osver Schema",
-          "default": "",
-          "examples": [
-            "Android 8.1"
-          ],
-          "pattern": "^(.*)$"
-        },
-        "branchName": {
-          "$id": "#/properties/session/properties/branchName",
-          "type": "string",
-          "title": "The Branchname Schema",
-          "default": "",
-          "examples": [
-            "Samsung"
-          ],
-          "pattern": "^(.*)$"
-        },
-        "modelName": {
-          "$id": "#/properties/session/properties/modelName",
-          "type": "string",
-          "title": "The Modelname Schema",
-          "default": "",
-          "examples": [
-            "Samsung S8"
-          ],
-          "pattern": "^(.*)$"
-        },
-        "res": {
-          "$id": "#/properties/session/properties/res",
-          "type": "string",
-          "title": "The Res Schema",
-          "default": "",
-          "examples": [
-            "2960x1440"
-          ],
-          "pattern": "^(.*)$"
-        },
-        "tz": {
-          "$id": "#/properties/session/properties/tz",
-          "type": "string",
-          "title": "The Tz Schema",
-          "default": "",
-          "examples": [
-            "Asia/Bangkok"
-          ],
-          "pattern": "^(.*)$"
-        },
-        "appVer": {
-          "$id": "#/properties/session/properties/appVer",
-          "type": "string",
-          "title": "The Appver Schema",
-          "default": "",
-          "examples": [
-            "1.0.0"
-          ],
-          "pattern": "^(.*)$"
-        },
-        "manafacturerName": {
-          "$id": "#/properties/session/properties/manafacturerName",
-          "type": "string",
-          "title": "The Manafacturername Schema",
-          "default": "",
-          "examples": [
-            "Google"
-          ],
-          "pattern": "^(.*)$"
-        },
-        "phoneNumber": {
-          "$id": "#/properties/session/properties/phoneNumber",
-          "type": "string",
-          "title": "The Phonenumber Schema",
-          "default": "",
-          "examples": [
-            "0981349669"
-          ],
-          "pattern": "^(.*)$"
-        },
-        "carrierName": {
-          "$id": "#/properties/session/properties/carrierName",
-          "type": "string",
-          "title": "The Carriername Schema",
-          "default": "",
-          "examples": [
-            "Viettel"
-          ],
-          "pattern": "^(.*)$"
-        },
-        "networkType": {
-          "$id": "#/properties/session/properties/networkType",
-          "type": "string",
-          "title": "The Networktype Schema",
-          "default": "",
-          "examples": [
-            "Wifi"
-          ],
-          "pattern": "^(.*)$"
+      },
+      "session": {
+        "$id": "#/properties/session",
+        "type": "object",
+        "title": "The Session Schema",
+        "required": [
+          "createdAt",
+          "id",
+          "lastActiveAt",
+          "offset",
+          "platform",
+          "osVer",
+          "branchName",
+          "modelName",
+          "res",
+          "tz",
+          "manafacturerName"
+        ],
+        "properties": {
+          "createdAt": {
+            "$id": "#/properties/session/properties/createdAt",
+            "type": "integer",
+            "title": "The Createdat Schema",
+            "default": 0,
+            "examples": [
+              1559542062
+            ]
+          },
+          "id": {
+            "$id": "#/properties/session/properties/id",
+            "type": "string",
+            "title": "The Id Schema",
+            "default": "",
+            "examples": [
+              "ec39f099-9877-45d8-ad8e-198d675deb02"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "lastActiveAt": {
+            "$id": "#/properties/session/properties/lastActiveAt",
+            "type": "integer",
+            "title": "The Lastactiveat Schema",
+            "default": 0,
+            "examples": [
+              1559549791
+            ]
+          },
+          "offset": {
+            "$id": "#/properties/session/properties/offset",
+            "type": "string",
+            "title": "The Offset Schema",
+            "default": "",
+            "examples": [
+              "+07:00"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "platform": {
+            "$id": "#/properties/session/properties/platform",
+            "type": "string",
+            "title": "The Platform Schema",
+            "default": "",
+            "examples": [
+              "Android"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "osVer": {
+            "$id": "#/properties/session/properties/osVer",
+            "type": "string",
+            "title": "The Osver Schema",
+            "default": "",
+            "examples": [
+              "Android 8.1"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "branchName": {
+            "$id": "#/properties/session/properties/branchName",
+            "type": "string",
+            "title": "The Branchname Schema",
+            "default": "",
+            "examples": [
+              "Samsung"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "modelName": {
+            "$id": "#/properties/session/properties/modelName",
+            "type": "string",
+            "title": "The Modelname Schema",
+            "default": "",
+            "examples": [
+              "Samsung S8"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "res": {
+            "$id": "#/properties/session/properties/res",
+            "type": "string",
+            "title": "The Res Schema",
+            "default": "",
+            "examples": [
+              "2960x1440"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "tz": {
+            "$id": "#/properties/session/properties/tz",
+            "type": "string",
+            "title": "The Tz Schema",
+            "default": "",
+            "examples": [
+              "Asia/Bangkok"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "manafacturerName": {
+            "$id": "#/properties/session/properties/manafacturerName",
+            "type": "string",
+            "title": "The Manafacturername Schema",
+            "default": "",
+            "examples": [
+              "Google"
+            ],
+            "pattern": "^(.*)$"
+          }
         }
-      }
-    },
-    "visitor": {
-      "$id": "#/properties/visitor",
-      "type": "object",
-      "title": "The Visitor Schema",
-      "required": [
-        "clientId",
-        "userId"
-      ],
-      "properties": {
-        "clientId": {
-          "$id": "#/properties/visitor/properties/clientId",
-          "type": "string",
-          "title": "The Clientid Schema",
-          "default": "",
-          "examples": [
-            "754047c4273395119bda4e5280d190d4"
-          ],
-          "pattern": "^(.*)$"
-        },
-        "userId": {
-          "$id": "#/properties/visitor/properties/userId",
-          "type": "string",
-          "title": "The Userid Schema",
-          "default": "",
-          "examples": [
-            "754047c4273395119bda4e5280d19033"
-          ],
-          "pattern": "^(.*)$"
+      },
+      "appVer": {
+        "$id": "#/properties/appVer",
+        "type": "string",
+        "title": "The Appver Schema",
+        "default": "",
+        "examples": [
+          "1.0.0"
+        ],
+        "pattern": "^(.*)$"
+      },
+      "network": {
+        "$id": "#/properties/network",
+        "type": "object",
+        "title": "The Network Schema",
+        "required": [
+          "phoneNumber",
+          "carrierName",
+          "networkType"
+        ],
+        "properties": {
+          "phoneNumber": {
+            "$id": "#/properties/network/properties/phoneNumber",
+            "type": "string",
+            "title": "The Phonenumber Schema",
+            "default": "",
+            "examples": [
+              "0981349669"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "carrierName": {
+            "$id": "#/properties/network/properties/carrierName",
+            "type": "string",
+            "title": "The Carriername Schema",
+            "default": "",
+            "examples": [
+              "Viettel"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "networkType": {
+            "$id": "#/properties/network/properties/networkType",
+            "type": "string",
+            "title": "The Networktype Schema",
+            "default": "",
+            "examples": [
+              "Wifi"
+            ],
+            "pattern": "^(.*)$"
+          }
         }
+      },
+      "visitor": {
+        "$id": "#/properties/visitor",
+        "type": "object",
+        "title": "The Visitor Schema",
+        "required": [
+          "clientId",
+          "userId"
+        ],
+        "properties": {
+          "clientId": {
+            "$id": "#/properties/visitor/properties/clientId",
+            "type": "string",
+            "title": "The Clientid Schema",
+            "default": "",
+            "examples": [
+              "754047c4273395119bda4e5280d190d4"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "userId": {
+            "$id": "#/properties/visitor/properties/userId",
+            "type": [ "string", "null"],
+            "title": "The Userid Schema",
+            "default": "",
+            "examples": [
+              ""
+            ],
+            "pattern": "^(.*)$"
+          }
+        }
+      },
+      "schemaName": {
+        "$id": "#/properties/schemaName",
+        "type": "string",
+        "title": "The Schemaname Schema",
+        "default": "",
+        "examples": [
+          "mobile.cartEvent"
+        ],
+        "pattern": "^(.*)$"
+      },
+      "stm": {
+        "$id": "#/properties/stm",
+        "type": "integer",
+        "title": "The Stm Schema",
+        "default": 0,
+        "examples": [
+          1559549791
+        ]
       }
-    },
-    "schemaName": {
-      "$id": "#/properties/schemaName",
-      "type": "string",
-      "title": "The Schemaname Schema",
-      "default": "",
-      "examples": [
-        "mobile.cartEvent"
-      ],
-      "pattern": "^(.*)$"
-    },
-    "stm": {
-      "$id": "#/properties/stm",
-      "type": "integer",
-      "title": "The Stm Schema",
-      "default": 0,
-      "examples": [
-        1559549791
-      ]
     }
   }
-}

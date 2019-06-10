@@ -8,6 +8,8 @@
     "appId",
     "event",
     "session",
+    "appVer",
+    "network",
     "visitor",
     "schemaName",
     "stm"
@@ -29,6 +31,7 @@
       "title": "The Event Schema",
       "required": [
         "id",
+        "eventType",
         "eventName",
         "createdAt",
         "category",
@@ -47,13 +50,23 @@
           ],
           "pattern": "^(.*)$"
         },
+        "eventType": {
+          "$id": "#/properties/event/properties/eventType",
+          "type": "string",
+          "title": "The Eventtype Schema",
+          "default": "",
+          "examples": [
+            "TimingEvent"
+          ],
+          "pattern": "^(.*)$"
+        },
         "eventName": {
           "$id": "#/properties/event/properties/eventName",
           "type": "string",
           "title": "The Eventname Schema",
           "default": "",
           "examples": [
-            "TimingEvent"
+            "timingEvent"
           ],
           "pattern": "^(.*)$"
         },
@@ -122,11 +135,7 @@
         "modelName",
         "res",
         "tz",
-        "appVer",
-        "manafacturerName",
-        "phoneNumber",
-        "carrierName",
-        "networkType"
+        "manafacturerName"
       ],
       "properties": {
         "createdAt": {
@@ -227,16 +236,6 @@
           ],
           "pattern": "^(.*)$"
         },
-        "appVer": {
-          "$id": "#/properties/session/properties/appVer",
-          "type": "string",
-          "title": "The Appver Schema",
-          "default": "",
-          "examples": [
-            "1.0.0"
-          ],
-          "pattern": "^(.*)$"
-        },
         "manafacturerName": {
           "$id": "#/properties/session/properties/manafacturerName",
           "type": "string",
@@ -246,9 +245,31 @@
             "Google"
           ],
           "pattern": "^(.*)$"
-        },
+        }
+      }
+    },
+    "appVer": {
+      "$id": "#/properties/appVer",
+      "type": "string",
+      "title": "The Appver Schema",
+      "default": "",
+      "examples": [
+        "1.0.0"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "network": {
+      "$id": "#/properties/network",
+      "type": "object",
+      "title": "The Network Schema",
+      "required": [
+        "phoneNumber",
+        "carrierName",
+        "networkType"
+      ],
+      "properties": {
         "phoneNumber": {
-          "$id": "#/properties/session/properties/phoneNumber",
+          "$id": "#/properties/network/properties/phoneNumber",
           "type": "string",
           "title": "The Phonenumber Schema",
           "default": "",
@@ -258,7 +279,7 @@
           "pattern": "^(.*)$"
         },
         "carrierName": {
-          "$id": "#/properties/session/properties/carrierName",
+          "$id": "#/properties/network/properties/carrierName",
           "type": "string",
           "title": "The Carriername Schema",
           "default": "",
@@ -268,7 +289,7 @@
           "pattern": "^(.*)$"
         },
         "networkType": {
-          "$id": "#/properties/session/properties/networkType",
+          "$id": "#/properties/network/properties/networkType",
           "type": "string",
           "title": "The Networktype Schema",
           "default": "",
@@ -300,11 +321,11 @@
         },
         "userId": {
           "$id": "#/properties/visitor/properties/userId",
-          "type": "string",
+          "type": ["string", "null"],
           "title": "The Userid Schema",
           "default": "",
           "examples": [
-            "754047c4273395119bda4e5280d19033"
+            ""
           ],
           "pattern": "^(.*)$"
         }
